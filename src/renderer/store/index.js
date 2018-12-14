@@ -15,6 +15,6 @@ export default new Vuex.Store({
   ],
   strict: process.env.NODE_ENV !== 'production',
   state: {
-    api_url: 'http://www.splashbase.co/api/v1/images/random'
+    //
   }
 })

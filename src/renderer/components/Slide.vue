@@ -7,7 +7,7 @@
     >
       <img
         v-show="loaded"
-        :src="url"
+        :src="img_url"
         class="image center"
         @load="isLoaded"
       >
@@ -25,7 +25,7 @@
 export default {
   data () {
     return {
-      url: '',
+      img_url: '',
       loaded: false
     }
   },
@@ -35,9 +35,9 @@ export default {
   methods: {
     fetch () {
       setInterval(function () {
-        this.$http.get(this.$store.state.api_url)
+        this.$http.get(this.$store.state.Slice.api_url)
           .then(({ data }) => {
-            this.url = data.url
+            this.img_url = data.url
           })
       }.bind(this), 3000)
     },
